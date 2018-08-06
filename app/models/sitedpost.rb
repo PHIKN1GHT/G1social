@@ -1,0 +1,2 @@
+class Sitedpost < ApplicationRecord
+end

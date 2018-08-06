@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @sitedpost.content %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @sitedpost.position %>
+</p>
+
+<%= link_to 'Edit', edit_sitedpost_path(@sitedpost) %> |
+<%= link_to 'Back', sitedposts_path %>

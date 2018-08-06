@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sitedposts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sitedposts.each do |sitedpost| %>
+      <tr>
+        <td><%= sitedpost.content %></td>
+        <td><%= sitedpost.position %></td>
+        <td><%= link_to 'Show', sitedpost %></td>
+        <td><%= link_to 'Edit', edit_sitedpost_path(sitedpost) %></td>
+        <td><%= link_to 'Destroy', sitedpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sitedpost', new_sitedpost_path %>

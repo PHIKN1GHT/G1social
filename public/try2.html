@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <title>样例</title>
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+    <script type="text/javascript"
+            src="https://webapi.amap.com/maps?v=1.4.8&key=b38f7391301b4f411589921db716b35a&plugin=AMap.Autocomplete"></script>
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+</head>
+<body>
+<div id="container"></div>
+<script type="text/javascript">
+    var marker, map = new AMap.Map("container", {
+        resizeEnable: true,
+        zoom:200,
+        center: [121.5041112900, 30.8310372493]
+    });
+    //为地图注册click事件获取鼠标点击出的经纬度坐标
+    var clickEventListener = map.on('click', function(e) {
+        //显示图标
+         marker = new AMap.Marker({
+            icon: "https://webapi.amap.com/theme/v1.3/markers/n/mark_b.png",
+            position: [e.lnglat.getLng(),e.lnglat.getLat()]
+        });
+        marker.setMap(map);
+        //显示经纬度
+       alert(e.lnglat.getLng() + ',' + e.lnglat.getLat())
+    });
+    var auto = new AMap.Autocomplete({
+        input: "tipinput"
+    });
+    AMap.event.addListener(auto, "select", select);//注册监听，当选中某条记录时会触发
+    function select(e) {
+        if (e.poi && e.poi.location) {
+            map.setZoom(15);
+            map.setCenter(e.poi.location);
+        }
+    }
+</script>
+</body>
+</html>

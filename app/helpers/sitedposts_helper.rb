@@ -1,0 +1,2 @@
+module SitedpostsHelper
+end

@@ -1,0 +1,7 @@
+{
+  "name": "G1social",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "3.5"
+  }
+}
