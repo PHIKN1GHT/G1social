@@ -9,5 +9,5 @@ module.exports = {
   use: [{
     loader: 'vue-loader',
     options: { extractCSS }
-  }]
+  }],
 }

@@ -6,12 +6,12 @@ An open source social application based on geographic information.
 # Description
 G1social aims to provide a lively campus map with social networking services, and a powerful filter to help your focus on your interests.
 
-Major developers:
-- KALE1D0
-- ICPCcoder
-- Reclusive
-- xuxiaojin
-- RSilence
+Major developers : (All from ECUST)
+- Jetuz_Chen (@jetuz)
+- ICPCcoder (@ICPCcoder)
+- Reclusive (@Reclusive)
+- xuxiaojin (@xuxiaojin)
+- RSilence (@RSilence)
 
 # Requirements
 Node.js 8.11.3

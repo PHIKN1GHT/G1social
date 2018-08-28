@@ -1,16 +1,21 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
+    <navigator></navigator>
+    <container></container>
   </div>
 </template>
 
 <script>
+import Navigator from 'navigator.vue'
+import Container from 'container.vue'
 export default {
-  data: function () {
-    return {
-      message: "Hello Vue!"
-    }
+  components: {
+    "navigator" : Navigator,
+    "container" : Container,
+  },
+  methods:{
   }
+
 }
 </script>
 
