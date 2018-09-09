@@ -2,6 +2,10 @@
   "name": "G1social",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "3.5"
+    "@rails/webpacker": "3.5",
+    "vue": "^2.5.17",
+    "vue-amap": "^0.5.8",
+    "vue-loader": "14.2.2",
+    "vue-template-compiler": "^2.5.17"
   }
 }
